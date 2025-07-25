@@ -436,7 +436,7 @@ class MplusQAPIclient
 
     $wsdl_url = $location.'?wsdl';
     try {
-      if (!$this->skipQuickAvailabilityCheck) { 
+      if (!$this->getSkipQuickAvailabilityCheck()) { 
         // Don't wait longer than 5 seconds for the http response code to complete
         // , before we actually initialize the SoapClient and start running requests
         // we expect a "405 Method Not Allowed" http response code if the api is online
