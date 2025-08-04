@@ -455,7 +455,7 @@ class MplusQAPIclient
       throw new MplusQAPIException($exception->getMessage());
     }
 
-    if ( ! $this->skipApiVersionCheck) {
+    if ( ! $this->getSkipApiVersionCheck()) {
       $this->checkApiVersion();
     }
 
